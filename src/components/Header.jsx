@@ -2,12 +2,10 @@ import React from "react";
 import App, { AppContext } from "../App";
 import { useContext } from "react";
 import { Link } from "react-router-dom";
-//import "./Header.css";
-
 export default function Header() {
   const { user } = useContext(AppContext);
   return (
-    <header>
+    <div>
       <h1>My Online Shop</h1>
       <Link to="/">Home</Link>-<Link to="/cart">Cart</Link>-
       {user.token ? (
@@ -16,6 +14,6 @@ export default function Header() {
         <Link to="/login">Login</Link>
       )}
       <hr />
-    </header>
+    </div>
   );
 }
